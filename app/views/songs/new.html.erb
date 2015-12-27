@@ -3,6 +3,7 @@
   Add a new song for <%= @artist.name %>
 </p>
 <%= form_for([@artist, @song]) do |f| %>
+<%= render 'shared/errors', object: f.object %>
   <%= f.label :title %>
   <%= f.text_field :title %>
 
