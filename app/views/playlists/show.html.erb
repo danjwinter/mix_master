@@ -1,0 +1,5 @@
+<h1><%= @playlist.name %></h1>
+<ol>
+<%= render @playlist_songs %>
+</ol>
+<%= link_to "Edit", edit_playlist_path(@playlist) %>
