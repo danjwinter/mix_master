@@ -2,6 +2,8 @@ require 'rails_helper'
 
 RSpec.feature "User edits a playlist" do
   scenario "they can edit a playlist and see those edits" do
+    byebug
+
     playlist = create(:playlist_with_songs, songs_count: 2)
 
     song = playlist.songs.first
@@ -17,10 +19,7 @@ RSpec.feature "User edits a playlist" do
     expect(page).to have_content "Thrash"
     expect(page).to have_content "#{song2.title}"
     expect(page).to have_no_content "#{song.title}"
-
-
-
-
-
   end
 end
+
+
