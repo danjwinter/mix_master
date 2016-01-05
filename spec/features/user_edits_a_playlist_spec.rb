@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.feature "User edits a playlist" do
   scenario "they can edit a playlist and see those edits" do
-    byebug
 
     playlist = create(:playlist_with_songs, songs_count: 2)
 
