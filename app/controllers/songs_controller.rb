@@ -10,6 +10,7 @@ class SongsController < ApplicationController
     @artist = Artist.find(params[:artist_id])
     @song = @artist.songs.new(song_params)
     if @song.save
+      session[:most_recent_song_id] = @song.id
       redirect_to @song
     else
       render :new
