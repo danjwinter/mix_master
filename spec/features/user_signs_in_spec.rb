@@ -5,7 +5,7 @@ RSpec.feature "User signs in with Spotify" do
     auth_data = {
       'provider' => 'spotify',
       'info' => {
-        'display_name' => 'Fake User'
+        'display_name' => 'Fake User',
         'id' => '12345'
       }
     }
